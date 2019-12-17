@@ -10,16 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::resource('home', 'HomeController');
-Route::resource('employees', 'EmployeesController');
-Route::resource('jobs', 'JobsController');
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::('/jobs', 'JobsController');
-// Route::('/employees', 'EmployeesController');
+Route::resource('/jobs', 'JobsController');
+Route::resource('/employees', 'EmployeesController');
+Auth::routes();
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

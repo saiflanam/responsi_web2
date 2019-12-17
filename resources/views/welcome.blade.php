@@ -81,10 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <!-- Isikan dengan username akun github anda -->
+                    <h3>Muhamad Saiful Anam</h3>
                 </div>
 
                 <div class="links">
+                  <a href="https://github.com/saiflanam">Github</a>
                     <!-- ganti url dengan link github anda -->
                     <!-- <a href="#">GitHub</a> -->
                 </div>
