@@ -30,9 +30,9 @@ $factory->define(User::class, function (Faker $faker) {
 
 //  factory jobs
 //  kolom 'name' => faker->jobTitle
-$factory->define(Jobs:class, function (Faker $faker) {
+$factory->define(Jobs::class, function (Faker $faker) {
     return [
-        'id_jobs' => $faker->numberBetween(1,10),
+        // 'id_jobs' => $faker->numberBetween(1,10),
         'name' => $faker->jobTitle,
     ];
 });
@@ -42,10 +42,13 @@ $factory->define(Jobs:class, function (Faker $faker) {
 //  kolom 'email' => faker->email UNIQUE
 //  kolom 'phone' => faker->phoneNumber
 //  kolom 'address' => faker->address
-$factory->define(Employees:class, function (Faker $faker) {
+$factory->define(Employees::class, function (Faker $faker) {
     return [
-        'id_employees' => $faker->numberBetween(1,150)
+        // 'id_employees' => $faker->numberBetween(1,150)
         'name' => $faker->name,
+        'email' => $faker->UNIQUE()->email,
+        'phone' => $faker->phoneNumber,
+        'address' => $faker->address,
     ];
 });
 // documentation https://github.com/fzaninotto/Faker
